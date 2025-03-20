@@ -6,10 +6,30 @@
     xmlns:local="using:QuickCapture"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Title="QuickCapture">
+    mc:Ignorable="d">
 
-    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <Button x:Name="myButton" Click="myButton_Click">Click Me</Button>
-    </StackPanel>
+    <Grid>
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10">
+            <TextBlock Text="Quick Capture" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Text="使用方法: Ctrlキーを押しながらマウスをドラッグして範囲を選択します" HorizontalAlignment="Center" />
+            <TextBlock Text="選択範囲はファイルに自動保存されます" HorizontalAlignment="Center" />
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="20" Margin="0,20,0,0">
+                <StackPanel Orientation="Vertical" Spacing="5">
+                    <TextBlock Text="出力フォルダ:" />
+                    <TextBox x:Name="OutputPathTextBox" Width="200" Text="screenshot" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Spacing="5">
+                    <TextBlock Text="ファイル形式:" />
+                    <ComboBox x:Name="FileFormatComboBox" Width="100" SelectedIndex="0">
+                        <ComboBoxItem Content="JPG" />
+                        <ComboBoxItem Content="PNG" />
+                    </ComboBox>
+                </StackPanel>
+            </StackPanel>
+            <CheckBox x:Name="ShowPreviewCheckBox" Content="プレビューウィンドウを表示する" IsChecked="True" Margin="0,10,0,0" />
+            <TextBlock x:Name="StatusTextBlock" HorizontalAlignment="Center" Margin="0,10,0,0" />
+            <Button x:Name="StartButton" Content="開始" Click="StartButton_Click" Margin="0,20,0,0" HorizontalAlignment="Center" />
+            <Image x:Name="PreviewImage" Width="256" Height="256" Margin="0,20,0,0" Visibility="Collapsed" />
+        </StackPanel>
+    </Grid>
 </Window>
