@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "QuickCapture (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "QuickCapture (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

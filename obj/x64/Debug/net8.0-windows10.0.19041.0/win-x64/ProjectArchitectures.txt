@@ -1,0 +1,1 @@
+C:\Users\yasuf\source\repos\QuickCapture\QuickCapture.csproj;x64
